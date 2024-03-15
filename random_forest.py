@@ -19,7 +19,7 @@ def preprocessing(data):
     
     # TF-IDF vectorization of the email texts
     #vectorizer = TfidfVectorizer(stop_words='english', max_features=3000)
-    vectorizer = CountVectorizer()
+    vectorizer = CountVectorizer(stop_words='english', max_features=3000)
     x_vectorized = vectorizer.fit_transform(X)
 
     return x_vectorized, y, vectorizer
